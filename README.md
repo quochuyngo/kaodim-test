@@ -5,11 +5,6 @@
 
  ````swift
  func gcd(_ a: Int, _ b: Int) -> Int {
-    let zeroValues = arr.filter { $0 == 0 }
-    if zeroValues.count > 0 {
-        fatalError("Value can not be zero")
-    }
-    
     if b == 0 {
         return a
     } else {
@@ -18,6 +13,11 @@
 }
 
 func lcm(arr: [Int]) -> Int {
+    let zeroValues = arr.filter { $0 == 0 }
+    if zeroValues.count > 0 {
+        fatalError("Value can not be zero")
+    }
+    
     var result = arr.first!
     for i in 1..<arr.count {
         result = (arr[i]/gcd(arr[i], result))*result
@@ -129,4 +129,5 @@ func viewDidLoad() {
 }
 ````
 # Testing
-KaoDimTesting.playground
+[KaoDimTesting.playground](https://github.com/quochuyngo/kaodim-test/tree/master/KaoDimTesting.playground)
+
