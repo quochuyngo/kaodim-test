@@ -1,9 +1,15 @@
 # KaoDim Test
 
+# Swift
 1. Define a function `lcm(arr: [Int]) -> Int` which calculates the [lowest common multiplier(LCM)](https://en.wikipedia.org/wiki/Least_common_multiple) of a given array of `Integers`. Raise an appropriate error if any one of the integers are 0.
 
  ````swift
  func gcd(_ a: Int, _ b: Int) -> Int {
+    let zeroValues = arr.filter { $0 == 0 }
+    if zeroValues.count > 0 {
+        fatalError("Value can not be zero")
+    }
+    
     if b == 0 {
         return a
     } else {
@@ -122,3 +128,5 @@ func viewDidLoad() {
   })
 }
 ````
+# Testing
+KaoDimTesting.playground
